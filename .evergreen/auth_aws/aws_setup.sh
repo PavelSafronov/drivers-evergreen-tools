@@ -35,6 +35,8 @@ if [ -f $SCRIPT_DIR/test-env.sh ]; then
     rm $SCRIPT_DIR/test-env.sh
 fi
 
+echo "MongoDB_URI before aws_tester.py: ${MONGODB_URI:-}"
+
 export PROJECT_DIRECTORY
 python aws_tester.py "$@"
 
